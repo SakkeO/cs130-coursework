@@ -1,0 +1,250 @@
+body {
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    color: #fff;
+    
+}
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+a:hover {
+    color: #fff !important;
+}
+
+nav > a{
+    position:relative;
+}
+nav > a:hover::after{
+    margin-bottom: -5px;
+    content:'';
+    position:absolute;
+    width: 70%;
+    height: 0;    
+    left: 18px;
+    bottom: 0px; /*Change this to increase/decrease distance*/
+    border-bottom: 4px solid #1cb954;  
+}
+/**********/
+/* Layout */
+/**********/
+aside, footer, header, nav, section, article {
+    display: flex;
+    flex-direction: column;
+}
+body {
+    overflow: hidden;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: auto 100px;
+    grid-template-areas:
+       "left main"
+       "bottom bottom";
+    height: 100vh;
+    
+}
+aside {
+    background-color: #000;
+    grid-area: left;
+    padding-left: 20px;
+}
+aside > a {
+    color: #CCC !important;
+    padding: 10px;
+    padding-left: 20px;
+}
+aside > a > i{
+    padding-right: 20px;
+}
+.selectedOne {
+    color: #FFF !important;
+    border-left: 4px solid #1cb954;
+}
+
+header {
+    background: #111;
+    position: fixed;
+    width: calc(100vw - 250px);
+    left: 250px;
+    flex-direction: row;
+    text-transform: uppercase;
+    justify-content: flex-end;
+    padding: 30px 0px;
+    padding-right: 40px;
+    letter-spacing: 1px;
+
+}
+header #upgrade {
+    padding: 7px 30px;
+    border: solid 1px white;
+    border-radius: 20px;
+    color: #fff;
+
+}
+
+#upgrade:hover {
+    background-color: #333;
+}
+
+header #profile {
+    margin-left: 20px;
+    padding: 7px 30px;
+    background-color: #222;    
+    border-radius: 20px;
+    color: #fff;
+
+}
+
+#profile:hover {
+    background-color: #333;
+}
+
+main {
+    background: #111;
+    grid-area: main;
+    min-height: calc(350px);
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    z-index: 3;
+}
+#featured-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.artist-card {
+    width: 20%;
+    box-sizing: border-box; 
+    padding: 10px;
+}
+.artist-card > div {
+    background-color: #222;
+    border-radius: 10px;
+    padding-bottom: 50px;
+}
+img{
+    padding: 15px;
+    width: 100%;
+    border-radius: 50%;
+}
+h3{
+    margin-top: 0px;
+    padding-left: 5%;
+}
+p{
+    color: #CCC;
+    padding-left: 5%;
+}
+.fa-play {
+    opacity: 0;
+    margin-left: 65%;
+    background: #1cb954;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    vertical-align: middle;
+    padding: 17px;
+}
+.artist-card:hover .fa-play{
+    opacity: 100;
+    background: #1cb954;
+    border-radius: 50%;
+}
+
+
+
+nav {
+    margin-top: 100px;
+    margin-bottom: 30px;
+    flex-direction: row;
+    text-transform: uppercase;
+    
+}
+.selectedTwo {
+    color: #FFF !important;
+}
+.selectedTwo:after {
+    margin-bottom: -5px;
+    content:'';
+    position:absolute;
+    width: 70%;
+    height: 0;    
+    left: 18px;
+    bottom: 0px; /*Change this to increase/decrease distance*/
+    border-bottom: 4px solid #1cb954;  
+   
+}
+nav > a {
+    color: #CCC !important;
+    padding: 0px 20px;
+    letter-spacing: 2px;
+}
+
+
+footer {
+    background: #222;
+    grid-area: bottom;
+}
+footer > div > img {
+    border-radius: 0px;
+    padding: 0px;
+    width: 60px;
+}
+
+@media screen and (max-width: 1280px) {
+    .artist-card {
+        width: 33.3%;
+    }
+    .artist-card > div {
+        padding-bottom: 20px;
+    }
+}
+@media screen and (max-width: 930px) {
+    .artist-card {
+        width: 50%;
+    }
+    .artist-card > div {
+        padding-bottom: 10px;
+    }
+    body {
+        overflow: hidden;
+        margin: 0px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto 100px;
+        grid-template-areas:
+           "main"
+           "bottom";
+        height: 100vh;
+        
+    }
+    aside {
+        display: none;
+    }
+    #upgrade{
+        display: none;
+    }
+}
+@media screen and (max-width: 680px) {
+    .artist-card {
+        width: 100%;
+    }
+}
+/***************************/
+/* Accessories & Florishes */
+/***************************/
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 4px solid transparent;
+    border-radius: 16px;
+    background-clip: padding-box;
+    min-height: 30px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,100%,.3);
+}
