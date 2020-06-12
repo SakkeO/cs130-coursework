@@ -1,0 +1,233 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-color: rgb(196, 241, 244);
+}
+
+/* @media screen and (max-width: 1000px) {
+    .logo {
+        margin-left: -100px;
+    }
+} */
+
+/**********/
+/* Layout */
+/**********/
+/* aside, footer, header, nav, section, article {
+    display: flex;
+    flex-direction: column;
+} */
+
+#myVideo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+}
+/* .background{
+    position: sticky;
+    background-color: rgb(196, 241, 244);
+    left: 0;
+    width: 70vw;
+    height: 100vh;
+    margin-top: 100vh;
+} */
+/* styles the NBN logo, header and their animations*/
+header{
+    background-color: rgb(196, 241, 244);
+    position: sticky;
+    top: 0;
+}
+.head{
+    margin-top: 48%;
+    padding-top: 2vh;
+    z-index: 50;
+    padding-left: 10vw;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.logo-text {
+    overflow: hidden;
+    position: relative;
+    height: 125px;
+    padding-left: 10px;
+    font-family: 'Overpass', sans-serif;
+}
+h1 {
+    display: block;
+    font-size: 2em;
+}
+.logo-title {
+    font-size: 4rem;
+    line-height: 0.95;
+    color: #A0E7EB;
+    margin: 0;
+    margin-top: 4.5vh;
+    transform: translateX(-800px);
+}
+@media screen and (max-width: 1380px){
+    .logo-title {
+        font-size: 4rem;
+        line-height: 0.95;
+        color: #A0E7EB;
+        margin: 0;
+        margin-top: .5vh;
+        transform: translateX(-800px);
+    }
+}
+
+@keyframes slidein {
+    0% {
+        transform: translateX(-430px);
+    }
+    50% {
+        transform: translateX(0px);
+    }
+    70% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-720px);
+    }
+}
+.logo-animate .logo-title {
+    animation: 2500ms cubic-bezier(0.215, 0.61, 0.355, 1) 1000ms 1 slidein;
+    animation-fill-mode: forwards;
+}
+h2 {
+    display: block;
+    font-size: 1.5em;
+}
+
+.logo-tagline {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    font-size: 2rem;
+    line-height: 1;
+    color: #A0E7EB;
+    margin: 0 0 0 10px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    transform: translateX(-155px);
+}
+@keyframes slidein2{
+    0% {
+        transform: translateX(-155px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+.logo-animate .logo-tagline {
+    animation: 1000ms cubic-bezier(0.215, 0.61, 0.355, 1) 3000ms 1 slidein2;
+    animation-fill-mode: forwards;
+}
+.logo-image{
+    grid-area: content;
+    float:left; 
+    fill: white;
+    background-color: transparent;
+    transform-origin: 50% 50%;
+}
+.logo-image:hover{
+    fill: #18202A;
+    animation: spin 1.2s cubic-bezier(.57,.42,.33,1.17);
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+/*the beginnings of the main sectioning*/
+.content-holder {
+    width: 100vw;
+    background-color: rgb(196, 241, 244);
+    padding-bottom: 10px;
+}
+section {
+    margin-bottom: 100px;
+    min-height: calc(100vh);
+    display: grid;
+    grid: 300px 1fr 1fr;
+    grid-gap: 0;
+    margin-right: 10vw;
+}
+.content-left{
+    grid-column: 2;
+    padding: 50px;
+    background-color: #FFF;
+}
+.content-right{
+    grid-column: 3;
+    background-color: #FFF;
+    padding: 50px;
+}
+h3{
+    font-family: 'Overpass', sans-serif;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+a{
+    color: black;
+}
+a:hover{
+    color: rgb(133, 209, 213);
+    text-decoration: underline rgb(133, 209, 213);
+}
+h4{
+    font-family: 'Crimson Text', serif;
+    font-size: 1.1em;
+    color: #aeaeae;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: -5px;
+}
+h5{
+    font-family: 'Overpass', sans-serif;
+    font-size: .9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 10px;
+}
+.story-divider{
+    padding-bottom: 50px;
+    border-bottom: 1px solid #aeaeae;
+    bottom: 0px;
+}
+.section-title {
+    grid-column: 1 / 2;
+    text-align: right;
+    top: 25vh;
+    position: sticky;
+    align-self: flex-start;
+    color: #A0E7EB;
+    font-family: 'Overpass', sans-serif;
+    font-size: 3em;
+    margin-right: 20px;
+    padding-left: 5px;
+    z-index: 1;
+    /* border: solid 1px red; */
+}

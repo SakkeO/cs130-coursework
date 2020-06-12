@@ -1,0 +1,151 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    z-index: 1000;
+    background-color: #18202A;
+    padding: 10px 10px 50px 20px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 1px 15px #0000008c;
+}
+.logo {
+    display: inline;
+    align-items: center;
+    position: relative;
+}
+.logo-image{
+    float:left; 
+    fill: white;
+    background-color: transparent;
+    transform-origin: 50% 50%;
+}
+.logo-image:hover{
+    fill: rgb(196, 241, 244);
+    animation: spin 1.2s cubic-bezier(.57,.42,.33,1.17);
+}
+a:visited {
+    fill: white;
+}
+a:hover{
+    fill: rgb(196, 241, 244);
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.subscribe{
+    color: white;
+    font-family: 'Overpass', sans-serif;
+    font-size: .80em;
+    font-weight: 300;
+    text-align: right;
+    float: right;
+    text-transform: uppercase;
+    padding-top: 12px;
+    padding-right: 15px;
+}
+.subscribe2{
+    color: white;
+    font-family: 'Overpass', sans-serif;
+    font-size: .80em;
+    font-weight: 300;
+    text-align: right;
+    float: right;
+    text-transform: uppercase;
+    padding-top: 12px;
+    padding-right: 15px;
+    cursor: default;
+}
+.subscribe:hover{
+    color: rgb(196, 241, 244);
+    cursor: pointer;
+}
+.intro-holder{
+    height: 100%;
+    width: 100%;
+}
+.intro-text-holder{
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+}
+.img-holder{
+    height: 95vh;
+    background-image: url("images/shanida-younvanich.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+.hed{
+    transform: translate(0%, -80%);
+    color: rgb(54, 49, 157);
+    opacity: .8;
+    font-family: 'Overpass', sans-serif;
+    font-size: 7em;
+    font-weight: 900;
+}
+.dek{
+    margin-top: -15vh;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5em;
+}
+.byline{
+    transform: translate(0%, 50%);
+    font-family: 'Overpass', sans-serif;
+    color: rgb(54, 49, 157);
+    font-size: 1.25em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.bodyText{
+    text-align: left;
+    margin-left: 50%;
+    transform: translate(-50%, 10%);
+}
+/*Keep this the same unless for a specific stylistic reason*/
+p {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.25em;
+    color: black;
+    margin-bottom: 1.3rem;
+}
+/*You can change the color and style of the drop cap here*/
+.dropcap:first-child:first-letter {
+    color: rgb(54, 49, 157);
+    float: left;
+    font-family: Georgia;
+    font-size: 4.75em;
+    line-height: 60px;
+    padding-top: 6px;
+    padding-right: 8px;
+    padding-left: 3px;
+}
+
+.float-left{
+    position: relative;
+    float: left;
+    width: 50%;
+    margin-top: 3.5%;
+    margin-left: -25%;
+    margin-right: 3.5%;
+}
+img.amos{
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+  
+#route{
+    margin-top: -150%;
+    position: relative;
+    height: auto;
+    z-index: 5;
+}
+#path{
+    width: 100%;
+}

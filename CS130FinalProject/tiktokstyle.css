@@ -1,0 +1,271 @@
+/****************** MISC ********************/
+
+*{
+  margin: 0px;
+  padding: 0px;
+  background: black;
+}
+
+header{
+  top: 0;
+  position: sticky;
+  z-index: 1000;
+  background-color: #18202A;
+  padding: 10px 10px 50px 20px;
+  /* padding-left: 10px; */
+  /* position: sticky;
+  top: 0; */
+  box-shadow: 0px 1px 15px #0000008c;
+}
+
+.intro {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: black;
+  }
+  
+  a {
+    color: white;
+    display: inline;
+  }
+  
+  .byline {
+    margin-bottom: 5rem;
+    font-size: 15px;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.075em;
+    color: #27E6E9;
+    -webkit-animation: pulse 4s infinite alternate;
+            animation: pulse 4s infinite alternate;
+  }
+  @-webkit-keyframes pulse {
+    from {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  @keyframes pulse {
+    from {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  .dek {
+    margin: 2em 0 1em;
+    margin-top: -7px;
+    font-size: 25px;
+    font-family: 'Ubuntu';
+    line-height: 1.5;
+    color: #F74094;
+  }
+  
+/********************* hed / glitch effect ***********************/
+
+  .hed, .hed__clip, .hed__clip::before {
+    position: relative;
+    font-size: 10rem;
+    font-family: 'Oswald';
+    letter-spacing: -0.01em;
+    color: white;
+    -webkit-animation: colorSplit 1.25s steps(2, end) infinite;
+            animation: colorSplit 1.25s steps(2, end) infinite;
+  }
+  @-webkit-keyframes colorSplit {
+    25% {
+      text-shadow: -0.02em 0 0 #27E6E9, 0.025em 0 0 #F74094;
+    }
+    75% {
+      text-shadow: -0.035em 0 0 #27E6E9, 0.04em 0 0 #F74094;
+    }
+  }
+  @keyframes colorSplit {
+    25% {
+      text-shadow: -0.02em 0 0 #27E6E9, 0.025em 0 0 #F74094;
+    }
+    75% {
+      text-shadow: -0.035em 0 0 #27E6E9, 0.04em 0 0 #F74094;
+    }
+  }
+  .hed__clip, .hed__clip::before {
+    margin-left: 0%;
+    position: absolute;
+    top: 0;
+    left: -5px;
+    z-index: 11;
+    color: #333;
+    overflow: visible;
+    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 25%, 0 25%, 0 30%, 100% 30%, 100% 50%, 0 50%, 0 60%, 100% 60%, 100% 65%, 0 65%, 0 80%, 100% 80%, 100% 85%, 0 85%, 0% 0%);
+            clip-path: polygon(0% 0%, 100% 0, 100% 25%, 0 25%, 0 30%, 100% 30%, 100% 50%, 0 50%, 0 60%, 100% 60%, 100% 65%, 0 65%, 0 80%, 100% 80%, 100% 85%, 0 85%, 0% 0%);
+    -webkit-animation: glitch 1s steps(2, start) infinite;
+            animation: glitch 1s steps(2, start) infinite;
+  }
+  @-webkit-keyframes glitch {
+    30% {
+      left: 0px;
+    }
+    to {
+      left: 0px;
+    }
+  }
+  @keyframes glitch {
+    30% {
+      left: 0px;
+    }
+    to {
+      left: 0px;
+    }
+  }
+  .hed__clip::before {
+    margin-left: 0%;
+    content: "TikTok on the Clock";
+    color: white;
+    z-index: 9;
+    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 26%, 0 26%, 0 29%, 100% 29%, 100% 51%, 0 51%, 0 59%, 100% 59%, 100% 66%, 0 66%, 0 79%, 100% 79%, 100% 86%, 0 86%, 0% 0%);
+            clip-path: polygon(0% 0%, 100% 0, 100% 26%, 0 26%, 0 29%, 100% 29%, 100% 51%, 0 51%, 0 59%, 100% 59%, 100% 66%, 0 66%, 0 79%, 100% 79%, 100% 86%, 0 86%, 0% 0%);
+  }
+
+/*********** NAVIGATION STYLING ***************/
+
+  .logo {
+    display: inline;
+    align-items: center;
+    position: relative;
+}
+.logo-image{
+    grid-area: content;
+    float:left; 
+    fill: white;
+    background-color: transparent;
+    transform-origin: 50% 50%;
+}
+.logo-image:hover{
+    fill: rgb(196, 241, 244);
+    animation: spin 1.2s cubic-bezier(.57,.42,.33,1.17);
+}
+a:visited {
+    fill: white;
+}
+a:hover{
+    fill: rgb(196, 241, 244);
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.subscribe{
+    color: white;
+    font-family: 'Overpass', sans-serif;
+    font-size: .80em;
+    font-weight: 300;
+    text-align: right;
+    float: right;
+    text-transform: uppercase;
+    padding-top: 12px;
+    padding-right: 15px;
+    background-color: #18202A;
+}
+.subscribe2{
+    color: white;
+    font-family: 'Overpass', sans-serif;
+    font-size: .80em;
+    font-weight: 300;
+    text-align: right;
+    float: right;
+    text-transform: uppercase;
+    padding-top: 12px;
+    padding-right: 15px;
+    cursor: default;
+    background-color: #18202A;
+}
+.subscribe:hover{
+    color: rgb(196, 241, 244);
+    cursor: pointer;
+}
+
+article{
+  color: white;
+  top: 10vh;
+}
+
+.bodyText{
+  text-align: left;
+  padding-left: 25%;
+  padding-right: 25%;
+  margin-top: 5vh;
+  padding-top: 5vh;
+}
+/*Keep this the same unless for a specific stylistic reason*/
+p {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  /* display: flex;
+  justify-content: center; */
+}
+/*You can change the color and style of the drop cap here*/
+.dropcap:first-child:first-letter {
+  color: white;
+  float: left;
+  font-family: Oswald;
+  font-size: 4.75em;
+  line-height: 60px;
+  margin-top: -47px;
+  padding-right: 8px;
+  padding-left: 3px;
+  text-shadow: 0 -4px 0 #27E6E9, 0 4px 1px #F74094;
+}
+
+/******************** @ *****************/
+em{
+  font-weight: bold;
+  font-style: normal;
+  text-shadow: 0 -1.5px 0 #27E6E9, 0 1.5px 1px #F74094;
+}
+
+.curtain{
+  height:100vh;
+  position: relative;
+  z-index: 2;
+  background: black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  box-shadow: 0 14px 28px rgba(33, 33, 33, 0.1), 0 10px 10px rgba(33, 33, 33, 0.1);
+}
+
+.main{
+  position: fixed;
+  padding-top: 60px;
+  height: 550px;
+  overflow-y: scroll;
+  background-color: black;
+  /* background-color: white; */
+}
+
+.reveal-main{
+  height: 800px;
+  background: black;
+}
+
+.active {
+	position:relative;
+ /* margin-top:-111px;*/
+  margin-top:-6%;
+  margin-top:-118px;
+  height:900px;
+}
+
+.activetwo {
+	height:10px;
+  position:absolute;
+}
